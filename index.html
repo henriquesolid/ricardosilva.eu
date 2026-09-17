@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ricardo Silva — 45-minute 1:1 Microsoft 365 mentoring</title>
+<meta name="description" content="One-to-one live mentoring in Microsoft 365 with a senior consultant based in Dublin. Career change into IT, certification prep and hands-on technical guidance.">
+<meta name="author" content="Ricardo Silva">
+<link rel="canonical" href="https://www.ricardosilva.eu/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.ricardosilva.eu/">
+<meta property="og:title" content="Ricardo Silva — 1:1 Microsoft 365 mentoring">
+<meta property="og:description" content="One-to-one live mentoring in Microsoft 365 with a senior consultant based in Dublin.">
+<meta property="og:image" content="https://www.ricardosilva.eu/og-image.png">
+<meta property="og:locale" content="en_IE">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='10' fill='%230078D4'/><text x='20' y='27' font-size='17' font-weight='700' fill='white' text-anchor='middle' font-family='sans-serif'>RS</text></svg>">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ricardo Silva",
+  "url": "https://www.ricardosilva.eu/",
+  "jobTitle": "Senior Microsoft 365 Consultant",
+  "address": { "@type": "PostalAddress", "addressLocality": "Dublin", "addressCountry": "IE" },
+  "knowsAbout": ["Microsoft 365","SharePoint Online","Microsoft Entra ID","Exchange Online","Microsoft Teams","PowerShell","Microsoft Graph","Microsoft Purview"],
+  "makesOffer": {
+    "@type": "Offer",
+    "name": "45-minute 1:1 Microsoft 365 mentoring session",
+    "price": "50",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "itemOffered": {
+      "@type": "Service",
+      "name": "One-to-one Microsoft 365 mentoring",
+      "serviceType": "Educational mentoring",
+      "termsOfService": "45 minutes, live video call",
+      "availableLanguage": ["en","pt","es"]
+    }
+  }
+}
+</script>
+
+<style>
+/* ============================================================
+   Design tokens
+   ============================================================ */
+:root{
+  --blue:#0078D4; --blue-deep:#004E8C; --green:#107C10;
+  --bg:#fff; --bg-alt:#F6F9FC; --card:#fff;
+  --text:#191D24; --text-2:#56626F; --border:#E3E9EF; --ring:#D3E3F2;
+  --nav:rgba(255,255,255,.85);
+  --shadow:0 2px 8px rgba(16,35,60,.06),0 12px 32px rgba(16,35,60,.07);
+  --shadow-lg:0 4px 12px rgba(16,35,60,.08),0 24px 56px rgba(16,35,60,.13);
+  --radius:16px;
+}
+html[data-theme="dark"]{
+  --bg:#15171C; --bg-alt:#1B1E25; --card:#20242C;
+  --text:#F1F3F6; --text-2:#98A2B0; --border:#2B313A; --ring:#2A3A4C;
+  --nav:rgba(21,23,28,.86);
+  --shadow:0 2px 8px rgba(0,0,0,.35),0 12px 32px rgba(0,0,0,.35);
+  --shadow-lg:0 4px 12px rgba(0,0,0,.4),0 24px 56px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Segoe UI','Segoe UI Variable Text',system-ui,-apple-system,"Helvetica Neue",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img,svg{max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.narrow{max-width:760px}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:50px;padding:0 24px;border-radius:12px;border:1px solid transparent;
+  font-family:inherit;font-size:15.5px;font-weight:600;cursor:pointer;
+  text-decoration:none;transition:transform .15s,background .15s,border-color .15s;
+}
+.btn:active{transform:scale(.985)}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--blue-deep)}
+.btn-ghost{background:var(--card);color:var(--text);border-color:var(--border)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+.btn-block{width:100%}
+
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:60;background:var(--nav);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;gap:14px;height:62px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:16px;letter-spacing:-.2px;text-decoration:none;white-space:nowrap}
+.brand .mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--blue-deep));color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;flex-shrink:0}
+.brand .sur{color:var(--blue)}
+.nav-links{display:flex;gap:2px;margin-left:auto}
+.nav-links a{font-size:14.5px;font-weight:500;color:var(--text-2);padding:8px 12px;border-radius:8px;text-decoration:none}
+.nav-links a:hover{color:var(--text);background:var(--bg-alt)}
+.nav-tools{display:flex;align-items:center;gap:8px;margin-left:auto}
+.nav-links + .nav-tools{margin-left:8px}
+.icon-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  height:40px;min-width:40px;padding:0 11px;border-radius:10px;
+  border:1px solid var(--border);background:var(--card);color:var(--text);
+  cursor:pointer;font-family:inherit;font-size:13.5px;font-weight:600;
+}
+.icon-btn:hover{border-color:var(--blue)}
+.lang{position:relative}
+.lang-menu{
+  position:absolute;right:0;top:48px;min-width:168px;padding:6px;
+  background:var(--card);border:1px solid var(--border);border-radius:12px;
+  box-shadow:var(--shadow-lg);display:none;flex-direction:column;gap:2px;
+}
+.lang-menu.open{display:flex}
+.lang-menu button{
+  display:flex;align-items:center;gap:10px;width:100%;padding:11px 12px;
+  border:0;border-radius:8px;background:none;color:var(--text);
+  font-family:inherit;font-size:14.5px;text-align:left;cursor:pointer;
+}
+.lang-menu button:hover{background:var(--bg-alt)}
+.lang-menu button[aria-current="true"]{color:var(--blue);font-weight:700}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;padding:60px 0 54px;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(640px 380px at 88% -5%,rgba(0,120,212,.12),transparent 70%),
+    radial-gradient(520px 340px at -5% 105%,rgba(16,124,16,.08),transparent 70%);
+}
+.hero>.wrap{position:relative}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;
+  padding:7px 14px;border-radius:999px;border:1px solid var(--ring);
+  background:rgba(0,120,212,.07);color:var(--blue);
+  font-size:12.5px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;
+}
+.dot-live{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(16,124,16,.5);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 7px rgba(16,124,16,0)}100%{box-shadow:0 0 0 0 rgba(16,124,16,0)}}
+h1{font-size:clamp(30px,7vw,50px);line-height:1.1;font-weight:700;letter-spacing:-1.2px;margin-bottom:18px}
+h1 .accent{color:var(--blue)}
+.hero p.lead{font-size:clamp(16px,4vw,18.5px);color:var(--text-2);max-width:620px;margin-bottom:28px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-note{margin-top:20px;font-size:13.5px;color:var(--text-2)}
+
+/* ---------- Sections ---------- */
+section{padding:60px 0}
+section.alt{background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.head{margin-bottom:36px}
+.head.center{text-align:center}
+.kicker{display:block;color:var(--blue);font-size:12.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(24px,5.5vw,34px);font-weight:700;letter-spacing:-.8px;line-height:1.18;margin-bottom:10px}
+.sub{color:var(--text-2);font-size:16px}
+
+/* ---------- Price card ---------- */
+.price-card{
+  background:var(--card);border:1px solid var(--border);border-radius:20px;
+  padding:30px 26px;box-shadow:var(--shadow);max-width:460px;margin:0 auto;
+}
+.price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.price{font-size:44px;font-weight:700;letter-spacing:-1.6px;color:var(--blue);line-height:1}
+.price-per{font-size:15px;color:var(--text-2);font-weight:600}
+.launch-tag{
+  display:inline-block;margin-bottom:16px;padding:5px 12px;border-radius:999px;
+  background:rgba(16,124,16,.1);border:1px solid rgba(16,124,16,.3);color:var(--green);
+  font-size:12px;font-weight:700;letter-spacing:.3px;
+}
+.incl{list-style:none;display:flex;flex-direction:column;gap:11px;margin:20px 0 24px}
+.incl li{display:flex;gap:11px;font-size:15px;line-height:1.45}
+.incl svg{flex-shrink:0;margin-top:3px;color:var(--green)}
+.vat{font-size:12.5px;color:var(--text-2);margin-top:14px;text-align:center}
+
+/* ---------- Cards ---------- */
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px 24px;display:flex;flex-direction:column;gap:12px}
+.card .ic{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(0,120,212,.1);color:var(--blue);flex-shrink:0}
+.card h3{font-size:17px;font-weight:700;letter-spacing:-.2px}
+.card p{font-size:14.5px;color:var(--text-2);line-height:1.6}
+
+/* ---------- Topic chips ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.chip{
+  padding:11px 18px;border-radius:999px;border:1px solid var(--border);
+  background:var(--card);font-size:14.5px;font-weight:600;
+}
+
+/* ---------- Steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s}
+.step{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.step .n{
+  width:34px;height:34px;border-radius:50%;margin-bottom:14px;
+  border:2px solid var(--blue);color:var(--blue);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;
+}
+.step h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.step p{font-size:14px;color:var(--text-2);line-height:1.55}
+
+/* ---------- About ---------- */
+.about-top{display:flex;align-items:center;gap:18px;margin-bottom:22px;flex-wrap:wrap}
+.avatar{
+  width:76px;height:76px;border-radius:20px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--blue),var(--blue-deep));
+  color:#fff;display:flex;align-items:center;justify-content:center;
+  font-size:28px;font-weight:700;
+}
+.about p{font-size:16px;color:var(--text-2);line-height:1.7;margin-bottom:16px}
+.certs{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:22px}
+.certs li{display:flex;align-items:center;gap:9px;font-size:14px;padding:11px 15px;background:var(--card);border:1px solid var(--border);border-radius:11px}
+.certs svg{color:var(--green);flex-shrink:0}
+.scope{
+  margin-top:30px;padding:20px 24px;border-radius:var(--radius);
+  border:1px solid var(--ring);background:rgba(0,120,212,.05);
+}
+.scope h3{display:flex;align-items:center;gap:9px;font-size:15px;font-weight:700;color:var(--blue);margin-bottom:8px}
+.scope p{font-size:14px;color:var(--text-2);line-height:1.6;margin:0}
+
+/* ---------- FAQ ---------- */
+.faq{display:flex;flex-direction:column;gap:10px}
+.faq details{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.faq details[open]{border-color:var(--ring)}
+.faq summary{
+  list-style:none;cursor:pointer;padding:18px 20px;
+  font-size:15.5px;font-weight:600;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:9px;height:9px;flex-shrink:0;border-right:2px solid var(--text-2);border-bottom:2px solid var(--text-2);transform:rotate(45deg) translateY(-2px);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(-135deg) translateY(-2px)}
+.faq .a{padding:0 20px 18px;font-size:14.8px;color:var(--text-2);line-height:1.65}
+
+/* ---------- Booking embed ---------- */
+.embed-wrap{border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:var(--card);min-height:660px}
+#cal-embed{width:100%;min-width:280px;height:700px;overflow:auto}
+
+/* ---------- CTA band ---------- */
+.band{
+  border-radius:22px;padding:52px 26px;text-align:center;color:#fff;
+  background:linear-gradient(130deg,var(--blue),var(--blue-deep) 65%,#0b3a63);
+}
+.band h2{color:#fff}
+.band p{opacity:.88;margin-bottom:24px;font-size:16px}
+.band .btn-ghost{background:#fff;color:var(--blue-deep);border-color:#fff}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--border);background:var(--bg-alt);padding:36px 0;margin-top:0}
+.foot{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;font-size:13.5px;color:var(--text-2)}
+.foot a{color:var(--text-2);text-decoration:none}
+.foot a:hover{color:var(--blue)}
+
+/* ---------- Mobile ---------- */
+@media (max-width:860px){
+  .g3,.steps{grid-template-columns:1fr}
+  .nav-links{display:none}
+}
+@media (max-width:560px){
+  section{padding:46px 0}
+  .hero{padding:40px 0 40px}
+  .btn{width:100%}
+  .hero-ctas{flex-direction:column}
+  .certs{grid-template-columns:1fr}
+  .price-card{padding:26px 20px}
+  .band{padding:40px 20px;border-radius:18px}
+  .brand span.full{display:none}
+}
+</style>
+</head>
+
+<body>
+<!-- Set the theme before first paint to avoid a flash -->
+<script>
+(function(){try{var s=localStorage.getItem('theme');
+var d=s?s==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+document.documentElement.dataset.theme=d?'dark':'light';}catch(e){}})();
+</script>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="mark">RS</span>
+      <span class="full">Ricardo <span class="sur">Silva</span></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Main">
+      <a href="#session" data-i18n="nav.session">The session</a>
+      <a href="#who" data-i18n="nav.who">Who it's for</a>
+      <a href="#about" data-i18n="nav.about">About me</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+
+    <div class="nav-tools">
+      <div class="lang">
+        <button class="icon-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/>
+          </svg>
+          <span id="langLabel">EN</span>
+        </button>
+        <div class="lang-menu" id="langMenu" role="menu">
+          <button data-lang="en" role="menuitem">🇬🇧 English</button>
+          <button data-lang="pt" role="menuitem">🇧🇷 Português</button>
+          <button data-lang="es" role="menuitem">🇪🇸 Español</button>
+        </div>
+      </div>
+
+      <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">
+        <svg id="themeIcon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot-live"></span><span data-i18n="hero.eyebrow">1:1 live mentoring</span></span>
+    <h1><span data-i18n="hero.title">45 minutes with a Microsoft 365</span> <span class="accent" data-i18n="hero.accent">Architect</span></h1>
+    <p class="lead" data-i18n="hero.lead">Individual mentoring for people moving into IT and for professionals who already work in tech and want to go deeper. You bring the problem, we solve it live, and you leave with a written plan.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#book" data-i18n="hero.cta1">Book a session</a>
+    </div>
+    <p class="hero-note" data-i18n="hero.note">45 minutes live · Written summary afterwards · English, Portuguese or Spanish</p>
+  </div>
+</section>
+
+<!-- ===================== SESSION / PRICE ===================== -->
+<section class="alt" id="session">
+  <div class="wrap">
+    <div class="head center">
+      <span class="kicker" data-i18n="session.kicker">The session</span>
+      <h2 data-i18n="session.title">One format, no packages, no commitment</h2>
+      <p class="sub" data-i18n="session.sub">Book one session. If it helps, book another. That's the whole model.</p>
+    </div>
+
+    <div class="price-card">
+      <span class="launch-tag" data-i18n="session.launch">Launch price</span>
+      <div class="price-row">
+        <span class="price" id="priceTag">€50</span>
+        <span class="price-per" data-i18n="session.per">/ 45-minute session</span>
+      </div>
+      <ul class="incl">
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="session.i1">45 minutes live, one to one, video call</span></li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="session.i2">Screen sharing and hands-on work in a lab tenant</span></li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="session.i4">Written summary with concrete next steps</span></li>
+        <li><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg><span data-i18n="session.i5">In English, Portuguese or Spanish</span></li>
+      </ul>
+      <a class="btn btn-primary btn-block" href="#book" data-i18n="session.cta">Pick a time and book</a>
+      <p class="vat" data-i18n="session.vat">Price includes VAT. Payment is taken securely at booking.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHO IT'S FOR ===================== -->
+<section id="who">
+  <div class="wrap">
+    <div class="head center">
+      <span class="kicker" data-i18n="who.kicker">Who it's for</span>
+      <h2 data-i18n="who.title">Two starting points, one destination</h2>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg>
+        </div>
+        <h3 data-i18n="who.c1t">You're moving into IT</h3>
+        <p data-i18n="who.c1d">You come from another field and the amount of things to learn is paralysing. We cut it down to one path, build your first lab, and give you something concrete to say in an interview.</p>
+      </div>
+      <div class="card">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 7l-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>
+        </div>
+        <h3 data-i18n="who.c2t">You already work in IT</h3>
+        <p data-i18n="who.c2d">You're in support or infrastructure and want to specialise in the Microsoft cloud. We look at your real environment problems and at what actually gets you to the next role.</p>
+      </div>
+      <div class="card">
+        <div class="ic">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        </div>
+        <h3 data-i18n="who.c3t">You're preparing a certification</h3>
+        <p data-i18n="who.c3d">MS-900, MS-102, SC-300. We build a study plan that fits your week, and I answer the questions the official material leaves open.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TOPICS ===================== -->
+<section class="alt">
+  <div class="wrap narrow">
+    <div class="head center">
+      <span class="kicker" data-i18n="topics.kicker">Topics</span>
+      <h2 data-i18n="topics.title">What we can work on</h2>
+      <p class="sub" data-i18n="topics.sub">Bring a specific question and we'll go deep on it, or bring none and we'll start from where you are.</p>
+    </div>
+    <div class="chips">
+      <span class="chip" data-i18n="topics.t1">Microsoft 365 administration</span>
+      <span class="chip" data-i18n="topics.t2">SharePoint &amp; OneDrive governance</span>
+      <span class="chip" data-i18n="topics.t3">Entra ID, MFA &amp; Conditional Access</span>
+      <span class="chip" data-i18n="topics.t4">Exchange Online</span>
+      <span class="chip" data-i18n="topics.t5">Microsoft Teams</span>
+      <span class="chip" data-i18n="topics.t6">PowerShell &amp; Microsoft Graph</span>
+      <span class="chip" data-i18n="topics.t7">Microsoft Copilot readiness</span>
+      <span class="chip" data-i18n="topics.t8">Certification study plan</span>
+      <span class="chip" data-i18n="topics.t9">CV &amp; interview preparation</span>
+      <span class="chip" data-i18n="topics.t10">Building an IT career in Europe</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section>
+  <div class="wrap">
+    <div class="head center">
+      <span class="kicker" data-i18n="how.kicker">How it works</span>
+      <h2 data-i18n="how.title">Three steps, no back and forth</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h3 data-i18n="how.s1t">Pick a time and pay</h3>
+        <p data-i18n="how.s1d">Choose a slot that works for you and pay in the same step. The booking is confirmed immediately — no emails going back and forth to find a date.</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h3 data-i18n="how.s2t">Tell me what you need</h3>
+        <p data-i18n="how.s2d">The booking form asks what you want to cover. I read it before we meet, so the 45 minutes start on your problem instead of on introductions.</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h3 data-i18n="how.s3t">We meet, then you get the summary</h3>
+        <p data-i18n="how.s3d">45 minutes of live work with screen sharing. Afterwards you receive a written summary with the next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section class="alt" id="about">
+  <div class="wrap narrow about">
+    <div class="about-top">
+      <div class="avatar">RS</div>
+      <div>
+        <span class="kicker" data-i18n="about.kicker">About me</span>
+        <h2 data-i18n="about.title">Ricardo Silva</h2>
+        <p class="sub" style="margin:0" data-i18n="about.role">Senior Microsoft 365 consultant, based in Dublin</p>
+      </div>
+    </div>
+
+    <p data-i18n="about.p1">I've worked with Microsoft 365 for more than eleven years, today as a senior consultant in Ireland. That time has been spent inside real company tenants: migrations, SharePoint governance, identity and security, and automation with PowerShell and Graph.</p>
+    <p data-i18n="about.p2">I started from zero, as a Brazilian rebuilding a career in Europe. I know exactly what it feels like to open the admin portal for the first time and understand none of it — and how much faster it goes when someone experienced sits next to you for an hour.</p>
+
+    <ul class="certs">
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>SC-300 — Identity and Access Administrator</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>MS-102 — Microsoft 365 Administrator Expert</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>MS-700 — Teams Administrator</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>MD-102 — Endpoint Administrator</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>AB-900 — Copilot Admin Fundamentals</li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>AI-900 · AZ-900 · MS-900</li>
+    </ul>
+
+    <div class="scope">
+      <h3>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        <span data-i18n="scope.title">What this page is, and isn't</span>
+      </h3>
+      <p data-i18n="scope.body">This page offers individual mentoring and teaching only. I don't provide consulting, migration, implementation or production support services here. Everything demonstrated is done in my own lab environment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BOOKING ===================== -->
+<section id="book">
+  <div class="wrap">
+    <div class="head center">
+      <span class="kicker" data-i18n="book.kicker">Booking</span>
+      <h2 data-i18n="book.title">Pick a time that suits you</h2>
+      <p class="sub" data-i18n="book.sub">Times are shown in your own time zone. Payment is taken at booking.</p>
+    </div>
+
+    <div class="embed-wrap">
+      <!-- Cal.com inline embed. Configure the event in CONFIG below. -->
+      <div id="cal-embed"></div>
+    </div>
+
+    <p style="text-align:center;margin-top:18px">
+      <a class="btn btn-ghost" id="bookFallback" href="#" target="_blank" rel="noreferrer" data-i18n="book.fallback">Open the booking page</a>
+    </p>
+    <p class="vat" data-i18n="session.vat">Price includes VAT. Payment is taken securely at booking.</p>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="alt" id="faq">
+  <div class="wrap narrow">
+    <div class="head center">
+      <span class="kicker">FAQ</span>
+      <h2 data-i18n="faq.title">Questions people ask first</h2>
+    </div>
+
+    <div class="faq">
+      <details open>
+        <summary data-i18n="faq.q1">Do I need any experience to book?</summary>
+        <div class="a" data-i18n="faq.a1">No. A good part of the sessions are with people who have never worked in IT. Tell me where you're starting from in the booking form and I'll plan the hour around that.</div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q2">What language will the session be in?</summary>
+        <div class="a" data-i18n="faq.a2">English, Portuguese or Spanish — whichever you prefer. Just pick it in the booking form.</div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q3">Do I need to buy a Microsoft licence?</summary>
+        <div class="a" data-i18n="faq.a3">No. For anything hands-on we use a free trial tenant, which is enough for everything we'd cover in a session.</div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q4">Can I reschedule or cancel?</summary>
+        <div class="a" data-i18n="faq.a4">You can reschedule free of charge up to 24 hours before the session, using the link in your confirmation email. Cancellations more than 24 hours in advance are fully refunded.</div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q5">Do you do migrations or consulting for my company?</summary>
+        <div class="a" data-i18n="faq.a5">No. This is individual mentoring and teaching only. I don't take on implementation, migration or support work for companies through this page.</div>
+      </details>
+      <details>
+        <summary data-i18n="faq.q6">What if 45 minutes isn't enough?</summary>
+        <div class="a" data-i18n="faq.a6">Then book another one when you need it. There's no package to commit to and no subscription — each session stands on its own.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA BAND ===================== -->
+<section>
+  <div class="wrap">
+    <div class="band">
+      <h2 data-i18n="band.title">Ready when you are</h2>
+      <p data-i18n="band.sub">Pick a time that fits your week. Booking and payment happen in the same step, and the slot is confirmed straight away.</p>
+      <a class="btn btn-ghost" href="#book" data-i18n="band.cta">Book a session</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="yr">2026</span> Ricardo Silva — ricardosilva.eu</span>
+    <span><a href="mailto:hello@ricardosilva.eu">hello@ricardosilva.eu</a></span>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   CONFIG — the only part you need to edit
+   ============================================================ */
+const CONFIG = {
+  // Cal.com event: "<your-handle>/<event-slug>".
+  // The payment is set on the event itself inside Cal.com,
+  // under Event type -> Apps (Cal Payments or Stripe).
+  calLink: "ricardosilva.eu/45min",
+  // Namespace used by the embed — matches the event slug
+  calNamespace: "45min",
+  // Same event as a plain link, used by the button under the calendar
+  booking: "https://cal.com/ricardosilva.eu/45min",
+  // Displayed price. Change it here and it updates everywhere.
+  price:    "€50"
+};
+
+/* ============================================================
+   Translations — English is the source of truth
+   ============================================================ */
+const I18N = {
+  pt: {
+    "nav.session":"A sessão","nav.who":"Para quem é","nav.about":"Sobre mim","nav.faq":"Dúvidas",
+    "hero.eyebrow":"Mentoria individual ao vivo",
+    "hero.title":"45 minutos com um",
+    "hero.accent":"Arquiteto Microsoft 365",
+    "hero.lead":"Mentoria individual para quem está migrando para a área de TI e para quem já trabalha com tecnologia e quer ir mais fundo. Você traz o problema, resolvemos ao vivo, e você sai com um plano escrito.",
+    "hero.cta1":"Agendar uma sessão",
+    "hero.note":"45 minutos ao vivo · Resumo escrito depois · Português, inglês ou espanhol",
+    "session.kicker":"A sessão","session.title":"Um formato só, sem pacote e sem compromisso",
+    "session.sub":"Agende uma sessão. Se ajudar, agende outra. O modelo é esse.",
+    "session.launch":"Preço de lançamento","session.per":"/ sessão de 45 minutos",
+    "session.i1":"45 minutos ao vivo, individual, por videochamada",
+    "session.i2":"Compartilhamento de tela e mão na massa em tenant de laboratório",
+    "session.i4":"Resumo escrito com os próximos passos concretos",
+    "session.i5":"Em português, inglês ou espanhol",
+    "session.cta":"Escolher horário e agendar",
+    "session.vat":"Preço com IVA incluído. O pagamento é feito com segurança no momento do agendamento.",
+    "who.kicker":"Para quem é","who.title":"Dois pontos de partida, um destino",
+    "who.c1t":"Você está migrando para TI",
+    "who.c1d":"Você vem de outra área e a quantidade de coisas para aprender paralisa. A gente corta isso para um caminho só, monta seu primeiro laboratório e te dá algo concreto para dizer numa entrevista.",
+    "who.c2t":"Você já trabalha com TI",
+    "who.c2d":"Você está no suporte ou na infraestrutura e quer se especializar na nuvem Microsoft. Olhamos os problemas reais do seu ambiente e o que de fato te leva ao próximo cargo.",
+    "who.c3t":"Você está preparando uma certificação",
+    "who.c3d":"MS-900, MS-102, SC-300. Montamos um plano de estudo que cabe na sua semana, e eu respondo o que o material oficial deixa em aberto.",
+    "topics.kicker":"Temas","topics.title":"O que podemos trabalhar",
+    "topics.sub":"Traga uma pergunta específica e a gente se aprofunda nela, ou não traga nenhuma e começamos de onde você está.",
+    "topics.t1":"Administração do Microsoft 365","topics.t2":"Governança de SharePoint e OneDrive",
+    "topics.t3":"Entra ID, MFA e Conditional Access","topics.t4":"Exchange Online",
+    "topics.t5":"Microsoft Teams","topics.t6":"PowerShell e Microsoft Graph",
+    "topics.t7":"Preparação para o Microsoft Copilot","topics.t8":"Plano de estudo para certificação",
+    "topics.t9":"Currículo e preparação para entrevista","topics.t10":"Construir carreira de TI na Europa",
+    "how.kicker":"Como funciona","how.title":"Três passos, sem vai e volta",
+    "how.s1t":"Escolha o horário e pague",
+    "how.s1d":"Escolha um horário que funcione para você e pague no mesmo passo. O agendamento é confirmado na hora — nada de trocar e-mail para achar data.",
+    "how.s2t":"Me conte o que você precisa",
+    "how.s2d":"O formulário de agendamento pergunta o que você quer tratar. Eu leio antes, então os 45 minutos começam no seu problema e não nas apresentações.",
+    "how.s3t":"A gente se encontra, e depois vem o resumo",
+    "how.s3d":"45 minutos de trabalho ao vivo com compartilhamento de tela. Depois você recebe um resumo escrito com os próximos passos.",
+    "about.kicker":"Sobre mim","about.title":"Ricardo Silva",
+    "about.role":"Consultor sênior de Microsoft 365, baseado em Dublin",
+    "about.p1":"Trabalho com Microsoft 365 há mais de onze anos, hoje como consultor sênior na Irlanda. Esse tempo foi passado dentro de tenants de empresas reais: migrações, governança de SharePoint, identidade e segurança, e automação com PowerShell e Graph.",
+    "about.p2":"Comecei do zero, como brasileiro reconstruindo a carreira na Europa. Sei exatamente o que é abrir o portal de administração pela primeira vez e não entender nada — e o quanto acelera quando alguém experiente senta do seu lado por 45 minutos.",
+    "scope.title":"O que esta página é, e o que não é",
+    "scope.body":"Esta página oferece apenas mentoria individual e ensino. Não presto serviços de consultoria, migração, implementação ou suporte a ambiente de produção por aqui. Tudo que é demonstrado é feito no meu próprio ambiente de laboratório.",
+    "book.kicker":"Agendamento","book.title":"Escolha o horário que te serve",
+    "book.sub":"Os horários aparecem no seu fuso. O pagamento é feito no agendamento.",
+    "book.fallback":"Abrir a página de agendamento",
+    "faq.title":"O que perguntam primeiro",
+    "faq.q1":"Preciso ter experiência para agendar?",
+    "faq.a1":"Não. Boa parte das sessões é com gente que nunca trabalhou com TI. Conte no formulário de onde você está partindo e eu planejo a hora em cima disso.",
+    "faq.q2":"Em que idioma será a sessão?",
+    "faq.a2":"Português, inglês ou espanhol — o que você preferir. Basta escolher no formulário de agendamento.",
+    "faq.q3":"Preciso comprar licença da Microsoft?",
+    "faq.a3":"Não. Para a parte prática usamos um tenant de avaliação gratuito, que dá conta de tudo que veríamos numa sessão.",
+    "faq.q4":"Posso remarcar ou cancelar?",
+    "faq.a4":"Você pode remarcar sem custo até 24 horas antes, pelo link do e-mail de confirmação. Cancelamentos com mais de 24 horas de antecedência são reembolsados integralmente.",
+    "faq.q5":"Você faz migração ou consultoria para a minha empresa?",
+    "faq.a5":"Não. Aqui é só mentoria individual e ensino. Não assumo trabalho de implementação, migração ou suporte para empresas através desta página.",
+    "faq.q6":"E se 45 minutos não forem suficientes?",
+    "faq.a6":"Aí você agenda outra quando precisar. Não há pacote para se comprometer nem assinatura — cada sessão se sustenta sozinha.",
+    "band.title":"Quando você quiser",
+    "band.sub":"Escolha um horário que caiba na sua semana. Agendamento e pagamento acontecem no mesmo passo, e o horário fica confirmado na hora.",
+    "band.cta":"Agendar uma sessão"
+  },
+  es: {
+    "nav.session":"La sesión","nav.who":"Para quién es","nav.about":"Sobre mí","nav.faq":"Preguntas",
+    "hero.eyebrow":"Mentoría individual en vivo",
+    "hero.title":"45 minutos con un",
+    "hero.accent":"Arquitecto Microsoft 365",
+    "hero.lead":"Mentoría individual para quienes se cambian al área de TI y para profesionales que ya trabajan en tecnología y quieren profundizar. Tú traes el problema, lo resolvemos en vivo, y te vas con un plan escrito.",
+    "hero.cta1":"Agendar una sesión",
+    "hero.note":"45 minutos en vivo · Resumen escrito después · Español, inglés o portugués",
+    "session.kicker":"La sesión","session.title":"Un solo formato, sin paquetes ni compromiso",
+    "session.sub":"Agenda una sesión. Si te sirve, agenda otra. Ese es todo el modelo.",
+    "session.launch":"Precio de lanzamiento","session.per":"/ sesión de 45 minutos",
+    "session.i1":"45 minutos en vivo, individual, por videollamada",
+    "session.i2":"Pantalla compartida y práctica en un tenant de laboratorio",
+    "session.i4":"Resumen escrito con los siguientes pasos concretos",
+    "session.i5":"En español, inglés o portugués",
+    "session.cta":"Elegir horario y agendar",
+    "session.vat":"Precio con IVA incluido. El pago se realiza de forma segura al agendar.",
+    "who.kicker":"Para quién es","who.title":"Dos puntos de partida, un destino",
+    "who.c1t":"Te estás cambiando a TI",
+    "who.c1d":"Vienes de otra área y la cantidad de cosas por aprender paraliza. Lo reducimos a un solo camino, montamos tu primer laboratorio y te damos algo concreto que decir en una entrevista.",
+    "who.c2t":"Ya trabajas en TI",
+    "who.c2d":"Estás en soporte o infraestructura y quieres especializarte en la nube de Microsoft. Miramos los problemas reales de tu entorno y lo que de verdad te lleva al siguiente puesto.",
+    "who.c3t":"Estás preparando una certificación",
+    "who.c3d":"MS-900, MS-102, SC-300. Armamos un plan de estudio que cabe en tu semana, y respondo lo que el material oficial deja abierto.",
+    "topics.kicker":"Temas","topics.title":"En qué podemos trabajar",
+    "topics.sub":"Trae una pregunta concreta y profundizamos en ella, o no traigas ninguna y empezamos desde donde estás.",
+    "topics.t1":"Administración de Microsoft 365","topics.t2":"Gobernanza de SharePoint y OneDrive",
+    "topics.t3":"Entra ID, MFA y Conditional Access","topics.t4":"Exchange Online",
+    "topics.t5":"Microsoft Teams","topics.t6":"PowerShell y Microsoft Graph",
+    "topics.t7":"Preparación para Microsoft Copilot","topics.t8":"Plan de estudio para certificación",
+    "topics.t9":"CV y preparación de entrevistas","topics.t10":"Construir una carrera de TI en Europa",
+    "how.kicker":"Cómo funciona","how.title":"Tres pasos, sin idas y venidas",
+    "how.s1t":"Elige horario y paga",
+    "how.s1d":"Elige un horario que te sirva y paga en el mismo paso. La reserva se confirma al instante — sin correos de ida y vuelta para encontrar fecha.",
+    "how.s2t":"Cuéntame qué necesitas",
+    "how.s2d":"El formulario pregunta qué quieres tratar. Lo leo antes, así los 45 minutos empiezan en tu problema y no en las presentaciones.",
+    "how.s3t":"Nos reunimos, y luego llega el resumen",
+    "how.s3d":"45 minutos de trabajo en vivo con pantalla compartida. Después recibes un resumen escrito con los siguientes pasos.",
+    "about.kicker":"Sobre mí","about.title":"Ricardo Silva",
+    "about.role":"Consultor sénior de Microsoft 365, radicado en Dublín",
+    "about.p1":"Trabajo con Microsoft 365 desde hace más de once años, hoy como consultor sénior en Irlanda. Ese tiempo lo he pasado dentro de tenants de empresas reales: migraciones, gobernanza de SharePoint, identidad y seguridad, y automatización con PowerShell y Graph.",
+    "about.p2":"Empecé desde cero, como brasileño reconstruyendo una carrera en Europa. Sé exactamente qué se siente al abrir el portal de administración por primera vez y no entender nada — y cuánto acelera todo cuando alguien con experiencia se sienta a tu lado 45 minutos.",
+    "scope.title":"Qué es esta página, y qué no es",
+    "scope.body":"Esta página ofrece únicamente mentoría individual y enseñanza. No presto servicios de consultoría, migración, implementación ni soporte en producción por aquí. Todo lo que se demuestra se hace en mi propio entorno de laboratorio.",
+    "book.kicker":"Reserva","book.title":"Elige el horario que te venga bien",
+    "book.sub":"Los horarios se muestran en tu zona horaria. El pago se realiza al reservar.",
+    "book.fallback":"Abrir la página de reserva",
+    "faq.title":"Lo que preguntan primero",
+    "faq.q1":"¿Necesito experiencia para reservar?",
+    "faq.a1":"No. Buena parte de las sesiones son con gente que nunca ha trabajado en TI. Cuéntame en el formulario desde dónde partes y planifico la hora en torno a eso.",
+    "faq.q2":"¿En qué idioma será la sesión?",
+    "faq.a2":"Español, inglés o portugués — el que prefieras. Solo tienes que elegirlo en el formulario.",
+    "faq.q3":"¿Tengo que comprar una licencia de Microsoft?",
+    "faq.a3":"No. Para la parte práctica usamos un tenant de evaluación gratuito, suficiente para todo lo que veríamos en una sesión.",
+    "faq.q4":"¿Puedo reprogramar o cancelar?",
+    "faq.a4":"Puedes reprogramar sin coste hasta 24 horas antes, con el enlace del correo de confirmación. Las cancelaciones con más de 24 horas de antelación se reembolsan íntegramente.",
+    "faq.q5":"¿Haces migraciones o consultoría para mi empresa?",
+    "faq.a5":"No. Esto es solo mentoría individual y enseñanza. No asumo trabajos de implementación, migración ni soporte para empresas a través de esta página.",
+    "faq.q6":"¿Y si 45 minutos no alcanzan?",
+    "faq.a6":"Entonces reservas otra cuando la necesites. No hay paquete al que comprometerse ni suscripción — cada sesión se sostiene sola.",
+    "band.title":"Cuando tú quieras",
+    "band.sub":"Elige un horario que encaje en tu semana. Reserva y pago ocurren en el mismo paso, y la cita queda confirmada al instante.",
+    "band.cta":"Agendar una sesión"
+  }
+};
+
+/* ============================================================
+   Language handling
+   ============================================================ */
+const SUPPORTED = ["en","pt","es"];
+const HTML_LANG = { en:"en", pt:"pt-BR", es:"es" };
+
+// English lives in the HTML itself, so capture it once as the fallback dictionary.
+const EN = {};
+document.querySelectorAll("[data-i18n]").forEach(el => {
+  EN[el.getAttribute("data-i18n")] = el.innerHTML;
+});
+
+function detectLang(){
+  try {
+    const saved = localStorage.getItem("lang");
+    if (saved && SUPPORTED.includes(saved)) return saved;
+  } catch(e){}
+  const prefs = navigator.languages && navigator.languages.length
+    ? navigator.languages : [navigator.language || "en"];
+  for (const p of prefs){
+    const base = String(p).slice(0,2).toLowerCase();
+    if (SUPPORTED.includes(base)) return base;
+  }
+  return "en";
+}
+
+function applyLang(lang){
+  const dict = lang === "en" ? EN : Object.assign({}, EN, I18N[lang] || {});
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  document.documentElement.lang = HTML_LANG[lang] || "en";
+  document.getElementById("langLabel").textContent = lang.toUpperCase();
+  document.querySelectorAll("#langMenu button").forEach(b => {
+    b.setAttribute("aria-current", String(b.dataset.lang === lang));
+  });
+  try { localStorage.setItem("lang", lang); } catch(e){}
+}
+
+/* ============================================================
+   Theme
+   ============================================================ */
+const SUN = '<circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
+const MOON = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+
+function setTheme(dark){
+  document.documentElement.dataset.theme = dark ? "dark" : "light";
+  document.getElementById("themeIcon").innerHTML = dark ? SUN : MOON;
+  try { localStorage.setItem("theme", dark ? "dark" : "light"); } catch(e){}
+  // Repaint the embedded calendar to match, if it has loaded
+  try {
+    const ns = window.Cal && window.Cal.ns && window.Cal.ns[CONFIG.calNamespace];
+    if (ns) ns("ui", { theme: dark ? "dark" : "light" });
+  } catch(e){}
+}
+
+/* ============================================================
+   Boot
+   ============================================================ */
+document.addEventListener("DOMContentLoaded", function(){
+  // Language
+  applyLang(detectLang());
+
+  const langBtn = document.getElementById("langBtn");
+  const langMenu = document.getElementById("langMenu");
+  langBtn.addEventListener("click", function(e){
+    e.stopPropagation();
+    const open = langMenu.classList.toggle("open");
+    langBtn.setAttribute("aria-expanded", String(open));
+  });
+  langMenu.querySelectorAll("button").forEach(b => {
+    b.addEventListener("click", function(){
+      applyLang(b.dataset.lang);
+      langMenu.classList.remove("open");
+      langBtn.setAttribute("aria-expanded","false");
+    });
+  });
+  document.addEventListener("click", function(){
+    langMenu.classList.remove("open");
+    langBtn.setAttribute("aria-expanded","false");
+  });
+
+  // Theme
+  setTheme(document.documentElement.dataset.theme === "dark");
+  document.getElementById("themeBtn").addEventListener("click", function(){
+    setTheme(document.documentElement.dataset.theme !== "dark");
+  });
+
+  // Config-driven values
+  document.getElementById("priceTag").textContent = CONFIG.price;
+  document.getElementById("bookFallback").href = CONFIG.booking;
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  // ----------------------------------------------------------
+  // Cal.com inline embed (official snippet, namespaced).
+  // Booking and payment happen in the same step: the payment app is
+  // enabled on the event itself inside Cal.com, so the slot is only
+  // confirmed once the fee is paid.
+  // The page still works without this: the button underneath the
+  // calendar always opens the booking page directly.
+  // ----------------------------------------------------------
+  const wrap = document.querySelector(".embed-wrap");
+  const holder = document.getElementById("cal-embed");
+  const NS = CONFIG.calNamespace;
+
+  try {
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal; let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {}; cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else { p(cal, ar); }
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    Cal("init", NS, { origin: "https://app.cal.com" });
+    Cal.config = Cal.config || {};
+    Cal.config.forwardQueryParams = true;
+
+    Cal.ns[NS]("inline", {
+      elementOrSelector: "#cal-embed",
+      config: { layout: "month_view", useSlotsViewOnSmallScreen: "true" },
+      calLink: CONFIG.calLink
+    });
+
+    Cal.ns[NS]("ui", {
+      hideEventTypeDetails: false,
+      layout: "month_view",
+      theme: document.documentElement.dataset.theme === "dark" ? "dark" : "light"
+    });
+  } catch (e) {
+    wrap.style.display = "none";
+  }
+
+  // If the calendar never rendered, hide the frame and rely on the button
+  setTimeout(function(){
+    if (!holder.childElementCount) wrap.style.display = "none";
+  }, 8000);
+});
+</script>
+</body>
+</html>
